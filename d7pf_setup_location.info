@@ -2,6 +2,7 @@ name = d7pf_setup_location
 description = Setup location views that Joe is working on for PPs
 core = 7.x
 package = PP Setup
+php = 5.2.4
 dependencies[] = ctools
 dependencies[] = views
 features[ctools][] = views:views_default:3.0

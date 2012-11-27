@@ -43,6 +43,24 @@ function d7pf_setup_location_views_default_views() {
   $handler->display->display_options['fields']['title']['ui_name'] = 'administrative title';
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+  /* Field: Content: All taxonomy terms */
+  $handler->display->display_options['fields']['term_node_tid']['id'] = 'term_node_tid';
+  $handler->display->display_options['fields']['term_node_tid']['table'] = 'node';
+  $handler->display->display_options['fields']['term_node_tid']['field'] = 'term_node_tid';
+  $handler->display->display_options['fields']['term_node_tid']['label'] = '';
+  $handler->display->display_options['fields']['term_node_tid']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['term_node_tid']['vocabularies'] = array(
+    'vocabulary_2' => 0,
+    'vocabulary_5' => 0,
+    'vocabulary_9' => 0,
+    'vocabulary_3' => 0,
+    'vocabulary_7' => 0,
+    'pp_for_setup' => 0,
+    'vocabulary_8' => 0,
+    'vocabulary_14' => 0,
+    'vocabulary_15' => 0,
+    'vocabulary_6' => 0,
+  );
   /* Contextual filter: Taxonomy term: Name */
   $handler->display->display_options['arguments']['name']['id'] = 'name';
   $handler->display->display_options['arguments']['name']['table'] = 'taxonomy_term_data';
@@ -57,10 +75,6 @@ function d7pf_setup_location_views_default_views() {
   $handler->display->display_options['arguments']['name']['summary']['format'] = 'default_summary';
   $handler->display->display_options['arguments']['name']['summary_options']['items_per_page'] = '25';
   $handler->display->display_options['arguments']['name']['specify_validation'] = TRUE;
-  $handler->display->display_options['arguments']['name']['validate']['type'] = 'taxonomy_term';
-  $handler->display->display_options['arguments']['name']['validate_options']['vocabularies'] = array(
-    'vocabulary_8' => 'vocabulary_8',
-  );
   $handler->display->display_options['arguments']['name']['validate']['fail'] = 'summary';
   $handler->display->display_options['arguments']['name']['limit'] = '0';
   /* Contextual filter: Global: Null */
